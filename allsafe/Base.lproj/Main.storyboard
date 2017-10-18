@@ -23,34 +23,26 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="sZl-3R-IHK">
-                                <rect key="frame" x="100" y="237" width="175" height="60"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="E2t-HJ-7cu"/>
-                                    <constraint firstAttribute="width" constant="175" id="EJW-Yw-D6o"/>
-                                </constraints>
-                            </imageView>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="智能运维 让IT尽在掌握" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d4F-Zf-lbg">
-                                <rect key="frame" x="100" y="297.5" width="175" height="21"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2016-2017 ALLSENSE Ltd." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bHA-Bb-6Xq">
                                 <rect key="frame" x="93.5" y="615" width="189.5" height="12"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="10"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="xcH-DX-sNv">
+                                <rect key="frame" x="100.5" y="232" width="175" height="70"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="70" id="2zL-ue-Mjt"/>
+                                    <constraint firstAttribute="width" constant="175" id="snS-aG-xZ2"/>
+                                </constraints>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" red="0.0" green="0.25098040700000002" blue="0.50196081400000003" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
-                            <constraint firstItem="sZl-3R-IHK" firstAttribute="centerY" secondItem="Raw-nO-hoA" secondAttribute="centerY" multiplier="0.8" id="Bzw-sR-cnq"/>
-                            <constraint firstItem="d4F-Zf-lbg" firstAttribute="top" secondItem="sZl-3R-IHK" secondAttribute="bottom" id="Rfe-7S-klV"/>
-                            <constraint firstItem="sZl-3R-IHK" firstAttribute="centerX" secondItem="Raw-nO-hoA" secondAttribute="centerX" id="ZE2-Rb-xFs"/>
+                            <constraint firstItem="xcH-DX-sNv" firstAttribute="centerX" secondItem="Raw-nO-hoA" secondAttribute="centerX" id="9tz-gi-fsJ"/>
                             <constraint firstItem="kbj-ds-KKd" firstAttribute="top" secondItem="bHA-Bb-6Xq" secondAttribute="bottom" constant="40" id="r2o-U2-gv7"/>
-                            <constraint firstItem="d4F-Zf-lbg" firstAttribute="centerX" secondItem="Raw-nO-hoA" secondAttribute="centerX" id="r46-0t-7fz"/>
                             <constraint firstItem="bHA-Bb-6Xq" firstAttribute="centerX" secondItem="Raw-nO-hoA" secondAttribute="centerX" id="rDj-3i-SCd"/>
+                            <constraint firstItem="xcH-DX-sNv" firstAttribute="centerY" secondItem="Raw-nO-hoA" secondAttribute="centerY" multiplier="0.8" id="uUD-kR-Sgz"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -104,11 +96,11 @@
                                     <action selector="signInBtn_Clicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="gFL-Nc-bGf"/>
                                 </connections>
                             </button>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="wUR-Nw-ykO">
-                                <rect key="frame" x="112.5" y="132" width="150" height="60"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Img_logo" translatesAutoresizingMaskIntoConstraints="NO" id="wUR-Nw-ykO">
+                                <rect key="frame" x="100" y="122" width="175" height="70"/>
                                 <constraints>
-                                    <constraint firstAttribute="height" constant="60" id="Edg-9W-AdW"/>
-                                    <constraint firstAttribute="width" constant="150" id="Nqc-jH-dxd"/>
+                                    <constraint firstAttribute="height" constant="70" id="Edg-9W-AdW"/>
+                                    <constraint firstAttribute="width" constant="175" id="Nqc-jH-dxd"/>
                                 </constraints>
                             </imageView>
                             <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="white" translatesAutoresizingMaskIntoConstraints="NO" id="eY1-pS-8rz">
@@ -193,6 +185,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="img_login_logo" width="118" height="30"/>
+        <image name="Img_logo" width="175" height="70"/>
     </resources>
 </document>
