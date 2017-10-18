@@ -15,11 +15,13 @@ class UserInfoUtil: NSObject {
         UserDefaults.standard.set(userInfo.server, forKey: "server")
         UserDefaults.standard.synchronize()
     }
-    
-    public static func getCurrentUserInfo() -> UserModel{
-        let username = UserDefaults.standard.string(forKey: "username")
-        let password = UserDefaults.standard.string(forKey: "password")
-        let server = UserDefaults.standard.string(forKey: "server")
-        return UserModel(user: username!, psd: password!, serv: server!)
+
+    public static func getCurrentUserInfo() -> UserModel? {
+        if let username = UserDefaults.standard.string(forKey: "username"),
+            let password = UserDefaults.standard.string(forKey: "password"),
+            let server = UserDefaults.standard.string(forKey: "server") {
+            return UserModel(user: username, psd: password, serv: server)
+        }
+        return nil
     }
 }

@@ -8,15 +8,16 @@ class MainWebVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        let userInfo = UserInfoUtil.getCurrentUserInfo()
-        let str = "\(userInfo.username):\(userInfo.password)"
-        let utf8str = str.data(using: String.Encoding.utf8)
-        let base64Encoded = utf8str?.base64EncodedString()
-        let url = "http://\(userInfo.server)?authkey=\(base64Encoded!)"
-        
-        print(url)
+        if let userInfo = UserInfoUtil.getCurrentUserInfo() {
+            let str = "\(userInfo.username):\(userInfo.password)"
+            let utf8str = str.data(using: String.Encoding.utf8)
+            let base64Encoded = utf8str?.base64EncodedString()
+            let url = "http://\(userInfo.server)?authkey=\(base64Encoded!)"
 
-        loadWebContent(url: url)
+            print(url)
+
+            loadWebContent(url: url)
+        }
     }
 
     func loadWebContent(url: String) {
