@@ -16,15 +16,14 @@ class SplashVC: UIViewController, SplashView {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-//        UserDefaults.standard.set("aaa", forKey: "username")
-        
         sleep(2)
-//        presneter = SplashPresenter.init(splashView: self)
-//        presneter?.login()
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        //UserDefaults.standard.set("user", forKey: "username") //用于测试直接登录
+        //UserDefaults.standard.set("user123", forKey: "username")
+        //UserDefaults.standard.set("10.0.0.6:7080", forKey: "username")
+
         presneter = SplashPresenter.init(splashView: self)
         presneter?.login()
     }
