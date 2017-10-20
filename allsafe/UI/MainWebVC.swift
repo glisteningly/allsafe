@@ -12,8 +12,11 @@ class MainWebVC: UIViewController {
             let str = "\(userInfo.username):\(userInfo.password)"
             let utf8str = str.data(using: String.Encoding.utf8)
             let base64Encoded = utf8str?.base64EncodedString()
-            let url = "http://\(userInfo.server)?authkey=\(base64Encoded!)"
-
+            var serverUrl = userInfo.server
+            if !serverUrl.contains("http://") {
+                serverUrl = "http://\(serverUrl)"
+            }
+            let url = "\(serverUrl)/#frame/home?authkey=\(base64Encoded!)"
             print(url)
 
             loadWebContent(url: url)
